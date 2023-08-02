@@ -15,12 +15,19 @@ namespace pattern
 
              */
             ValidateEmail validateEmail = new ValidateEmail();
-            validateEmail.UC1_Validate("abc");
-            validateEmail.UC2_Validate("@bridgelabz");
-            validateEmail.UC3_Validate(".co");
-            validateEmail.UC4_Validate("abcd.xyz");
-            validateEmail.ActualValidate("abc@bridgelabz.co.in");
-            
+            //validateEmail.UC1_Validate("abc");
+            //validateEmail.UC2_Validate("@bridgelabz");
+            //validateEmail.UC3_Validate(".co");
+            //validateEmail.UC4_Validate("abcd.xyz");
+            Console.WriteLine("Enter the Length of the Array");
+            int length = Convert.ToInt32(Console.ReadLine());
+            string[] array = new string[length];
+            Console.WriteLine("Enter the Email id");
+            for (int i = 0; i < length; i++)
+            {
+                array[i] = Console.ReadLine();
+                validateEmail.ActualValidate(array[i]);
+            }
         }
     }
 }
